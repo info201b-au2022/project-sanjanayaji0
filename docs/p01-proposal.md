@@ -5,7 +5,9 @@
 *_Affiliation: INFO-201: Technical Foundations of Informatics - The Information School - University of Washington_
 
 ### Abstract
-Our main question is; How can a developed national energy grid impact the quality of living of its citizens? This question is important since energy production and consumption have become one of the most significant geopolitical factors influencing a nation’s welfare. As we have seen in Ethiopia, for example, the construction of a large dam has allowed the nation to develop at a higher, more efficient pace, raise the quality of life, and export energy at a profit to neighboring countries. To address this question, we will analyze various overlapping data sets and come to a conclusion (s) from those data points.
+Our main question is: How can a developed national energy grid impact the quality of living of its citizens? This question is important since energy production and consumption have become one of the most significant geopolitical factors influencing a nation’s welfare. As we have seen in Ethiopia, for example, the construction of a large dam has allowed the nation to develop at a higher, more efficient pace, raise the quality of life, and export energy at a profit to neighboring countries. To address this question, we will analyze various overlapping data sets and come to a conclusion (s) from those data points.
+
+**Key Words:** Energy, Quality of Life, Energy production, Consumption
 
 ### Introduction
 
@@ -32,7 +34,14 @@ Our main question is; How can a developed national energy grid impact the qualit
 
 **Constraints:** Obviously, the collection of data on what we are trying to do is complicated. There are many data points that we must collect across nations with various styles and methodologies when it comes to collecting data. As understanding as we are of various global constraints on data collection, we decided to collect the common points of data, the stats that are recorded across the board, If we decide to exclude nations, we will do so with an explanation.
 
-## The Dataset
+### Research Questions
+1.  _How can a developed national energy grid impact the quality of living of its citizens?_
+
+2. _Which form of energy promises the most grid efficiency?_
+
+3. _Which form of energy consistently delivers improvements in HDI? And what can nations learn from our findings?_
+
+### The Dataset
 We have collected the following: 30 years' worth of data. This number is not random. On average, for a national grid to transform itself from one energy source to the other, it takes about 14 years. So why 30 years? Because it makes room for countries to switch from one energy source to another seamlessly with some room left over, meaning most or all changes to an energy system will be noticeable in the data. Now, here is what we chose to measure for all countries (one which didn't exists will simply not show up on the demonstration until data was available, ex, Fr Yugoslavia, South Sudan, east Timor, Serbia and Montenegro, Kosovo, etc.).
 
 * **HDI: Human Development Index**
@@ -40,15 +49,24 @@ We have collected the following: 30 years' worth of data. This number is not ran
 * **Economic Growth**
 * **Energy exports**
 * **Emissions**
-* **Democratic Index**
 
-We plan to cross examine data sets linked in the data folder. (https://github.com/info201b-au2022/project-sanjanayaji0/tree/main/data)
+**Our Data:**
 
-Our data was collected from a various amount of sources, amongst them; The CIA Worldbook, IEA energy statistics, and other less common sources such as The Economist, which are less prevalent in our data.
+|Name|Num of Observations|Num of Variables  | URL  | Brief Description|
+|---|---|---|---|---|
+|HDI |191|8| https://hdr.undp.org/sites/default/files/2021-22_HDR/HDR21-22_Statistical_Annex_HDI_Table.xlsx  | Addresses general development of each country  |
+|Energy Grid|191|32| https://ourworldindata.org/grapher/electricity-prod-source-stacked |Breakdown of sources of energy - coal, oil, gas, nuclear, and renewables |
+|Economics|191|33| https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.KD.ZG?downloadformat=csv  | GDP per country (Gross Domestic Product), organized per country per year starting 1990|
+|Energy Consumption|191|4| https://ourworldindata.org/explorers/energy?tab=table&facet=none&country=USA~GBR~CHN~OWID_WRL~IND~BRA~ZAF&hideControls=false&Total+or+Breakdown=Total&Energy+or+Electricity=Primary+energy&Metric=Per+capita+consumption | Per capita energy consumption per country from 1990-2021 |
+|Energy Emissions|191| 6| https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=csv  | Energy dependency, efficiency, and carbon dioxide emissions from 1990-2015|
 
-The large majority of these data collections comes mostly from nonprofits and NGOs or GO’s aimed at either
-1. **Merely presenting information (such as the CIA world book)**
-2. **Comes from organizations aimed at reducing climate change and increasing climate understanding and literacy.**
+
+
+Our data was collected from a various amount of sources, amongst them: Human Development Reports, Our World In Data, and World Bank Group. 
+
+* **Human Development Report:** Independent report commissioned by the United Nations Development Programme.
+* **Our World In Data:** Published by a group of researchers based in multiple universities including Oxford University.
+* **World Bank Group:** Non profit dedicated to presenting information and reducing proverty.
 
 The benefactors of the data we collected more than often are the researchers themselves, who consist mostly of students committing to internships. Evidently, once all the data points have been collected, they will be cited. Along with the sources we cited earlier, others will likely be added.
 
