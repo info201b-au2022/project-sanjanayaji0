@@ -1,7 +1,7 @@
 # How a Developed National Energy Grid Impacts the Quality of Life: Project Proposal
 **Code Name: World Peace**
 * Autumn 2022
-* _Authors: Sanjana Somayajula, Oswaldo Jiminez, Ian Chiu_
+* _Authors: Sanjana Somayajula, Oswaldo Jimenez, Ian Chiu_
 *_Affiliation: INFO-201: Technical Foundations of Informatics - The Information School - University of Washington_
 
 ### Abstract
@@ -62,7 +62,7 @@ We have collected the following: 30 years' worth of data. This number is not ran
 
 
 
-Our data was collected from a various amount of sources, amongst them: Human Development Reports, Our World In Data, and World Bank Group. 
+Our data was collected from a various amount of sources, amongst them: Human Development Reports, Our World In Data, and World Bank Group.
 
 * **Human Development Report:** Independent report commissioned by the United Nations Development Programme.
 * **Our World In Data:** Published by a group of researchers based in multiple universities including Oxford University.
