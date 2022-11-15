@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 source("../source/Chart1.R")
 source("../source/Chart2.R")
+source("../source/Chart3.R")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -141,4 +142,12 @@ This graph shows the correlation between how much electricity is being produced 
 chart2
 ```
 
-This chart tells us what form of energy generation yields the most energy output from the least waste energy. From this graph we can see hydro power delivers the best results with 90% output. 
+This chart tells us what form of energy generation yields the most energy output from the least waste energy. From this graph we can see hydro power delivers the best results with 90% output.
+
+[**Chart 3: Largest Share vs. HDI 2021**]{.underline}
+
+```{r echo=FALSE}
+chart3
+```
+
+This graph highlights countries on a scale of their HDI and what source of energy holds the largest share in their country. Each dot on the chart represents a country and the higher the HDI on the graph, the better a country is doing both socially and economically. The importance of this graph is to highlight the trend of which sources of energy provide the best HDI. Energy is vital in a country's development and through analyzing its source, one can make conclusions on the impact the source has on a country's development.
