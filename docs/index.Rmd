@@ -6,6 +6,8 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+source("../source/Chart1.R")
+source("../source/Chart2.R")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -125,6 +127,18 @@ We aggregated the following data from each country:
 
 We calculated five values from the data to summarize our statistics from each data set. Our first value is the **global mean of human development index from 2021.** Our calculated value was ***0.7181244***. Human Development value is measured on a scale from 0 to 1, and in our data we are correlating HDI to general quality of life. The average of this value measures the average for the world. This statistic is important as it pertains to a key element of our research question about quality of life. Our next summary value was the **change in average GDP (Gross Domestic Product) in each country in the past 30 years**. We are using GDP to represent a nation's economic standing which is also a part of our question regarding quality of life. Our calculated value was ***3.637778%***. This means that in the past 30 years, GDP growth has increased by about 3.7%. This value is important for our purposes because we will compare this value along with the HDI value with each nation's energy grid, in order to answer our central question of how a nation's energy consumption, emissions, and source of energy effects general quality of life. Our third value is **the change in energy consumption for the past 30 years.** Our calculated value was ***2102.827*** kilowatt hours per person. This value shows us that there has been a significant increase in global energy consumption. This value is important to us because it helps us examine our questions regarding how human development has improved, as an increase in energy consumption indicates an increase in development. Our fourth value was the **change in CO2 emissions per country in the last 30 years.** Our calculated value was ***-0.3878026.*** This indicates that there has been a decrease in CO2 emissions, which goes along with our background research in which we learned emissions from factories have significantly reduced, though there have been increased use of cars which has increased the overall carbon footprint. This value is pertinent to our question of how energy emissions and consumption is affected by quality of life. Our final value we calculated was **the number of kilowatt hours for the country which currenly uses the most renewable energy.** Our calculated value was ***56769.74*** kilowatt hours, and the country was Iceland. This value is important to our data because countries which use more renewable energy are more environmentally sustainable, and have a more developed energy grid. By comparing this value with our quality of life factors, we are able to answer our research questions.
 
-```{r setup, include=FALSE}
-source()
+[**Chart 1: Electricity Generation v. Human Development Index**]{.underline}
+
+```{r echo=FALSE}
+chart1
 ```
+
+This graph shows the correlation between how much electricity is being produced or how developed a nation's electricity grid is and how that relates to the overall HDI of the area. We can see the graph doesn't really show a correlation between the development of a national power grid and the overall HDI of the area.
+
+[**Chart 2: Energy Sources and their Efficiency**]{.underline}
+
+```{r echo=FALSE}
+chart2
+```
+
+This chart tells us what form of energy generation yields the most energy output from the least waste energy. From this graph we can see hydro power delivers the best results with 90% output. 
