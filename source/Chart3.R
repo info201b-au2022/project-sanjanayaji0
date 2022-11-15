@@ -34,7 +34,7 @@ View(hdi2021)
 energyByhdi <- merge(energyGrid, hdi2021, by="country")
 
 #Plotting graph
-ggplot(energyByhdi) +
+chart3 <- ggplot(energyByhdi) +
   geom_point(mapping = aes(x = Largest_Share, y = hdi_2021))
   
 
