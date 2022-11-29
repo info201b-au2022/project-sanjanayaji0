@@ -14,8 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # How a Developed National Energy Grid Impacts the Quality of Life: Project Report
 
-**Sanjana Somayajula, Oswaldo Jimenez, Ian Chiu**
-
 *INFO-201: Technical Foundations of Informatics*
 
 *The Information School*
@@ -77,7 +75,7 @@ We have collected the following: 30 years' worth of data. This number is not ran
 **Our Data:**
 
 | Name               | Num of Observations | Num of Variables | URL                                                                                                                                                                                                                        | Brief Description                                                                      |
-|--------------------|---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+|------------|------------|------------|-------------------------|------------|
 | HDI                | 191                 | 8                | <https://hdr.undp.org/sites/default/files/2021-22_HDR/HDR21-22_Statistical_Annex_HDI_Table.xlsx>                                                                                                                           | Addresses general development of each country                                          |
 | Energy Grid        | 191                 | 32               | <https://ourworldindata.org/grapher/electricity-prod-source-stacked>                                                                                                                                                       | Breakdown of sources of energy - coal, oil, gas, nuclear, and renewables               |
 | Economics          | 191                 | 33               | <https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.KD.ZG?downloadformat=csv>                                                                                                                                           | GDP per country (Gross Domestic Product), organized per country per year starting 1990 |
@@ -90,29 +88,11 @@ Our data was collected from a various amount of sources, amongst them: Human Dev
 -   **Our World In Data:** Published by a group of researchers based in multiple universities including Oxford University.
 -   **World Bank Group:** Non profit dedicated to presenting information and reducing proverty.
 
-**Expected Implications and Limitations:** The benefactors of the data we collected more than often are the researchers themselves, who consist mostly of students committing to internships. Evidently, once all the data points have been collected, they will be cited. Along with the sources we cited earlier, others will likely be added. Limitations include data about certain countries being unavailable. We are also working with such large data sets that some factors such as democratic index will be excluded, which could affect the calculated data.
+### Expected Implications and Limitations: 
 
-### References:
-
--   <https://www.belfercenter.org/project/geopolitics-energy-project>
-
--   <https://www.foreignaffairs.com/articles/world/2021-11-30/geopolitics-energy-green-upheaval?check_logged_in=1&utm_medium=promo_email&utm_source=lo_flows&utm_campaign=registered_user_welcome&utm_term=email_1&utm_content=20221024>
-
--   <https://energycapitalpower.com/geopolitics-of-energy-in-africa/>
-
--   <https://hdr.undp.org/sites/default/files/2021-22_HDR/HDR21-22_Statistical_Annex_HDI_Table.xlsx>
-
--   <https://ourworldindata.org/grapher/electricity-prod-source-stacked>
-
--   <https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.KD.ZG?downloadformat=csv>
-
--   <https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=csv>
-
--   <https://ourworldindata.org/explorers/energy?tab=table&facet=none&country=USA~GBR~CHN~OWID_WRL~IND~BRA~ZAF&hideControls=false&Total+or+Breakdown=Total&Energy+or+Electricity=Primary+energy&Metric=Per+capita+consumption>
+The benefactors of the data we collected more than often are the researchers themselves, who consist mostly of students committing to internships. Evidently, once all the data points have been collected, they will be cited. Along with the sources we cited earlier, others will likely be added. Limitations include data about certain countries being unavailable. We are also working with such large data sets that some factors such as democratic index will be excluded, which could affect the calculated data.
 
 # Data Analysis Report
-
-"Dynamic" paragraph. Write a summary paragraph that includes information calculated by your summary information function. (See chapter 18 in the book.) Table. (a) Render your table. (b) In a short paragraph beneath your table, describe pertinent observations found in it Three charts. (a) Render each of your charts. (b) In a short paragraph beneath each chart, describe the purpose of the chart and pertinent observations.
 
 ## Dynamic Paragraph
 
@@ -136,7 +116,7 @@ We calculated five values from the data to summarize our statistics from each da
 chart1
 ```
 
-This graph shows the correlation between how much electricity is being produced or how developed a nation's electricity grid is and how that relates to the overall HDI of the area. We can see the graph doesn't really show a correlation between the development of a national power grid and the overall HDI of the area.
+This graph shows the correlation between how much electricity is being produced or how developed a nation's electricity grid is and how that relates to the overall HDI of the area. Each dot on the graph represents a country. The actual country doesn't matter in this graph, as we are only looking to find a correlation between HDI, and Electricity generated. We can see the graph doesn't really show a correlation between the development of a national power grid and the overall HDI of the area. This provides an answer for our first research question of: *How can a developed national energy grid impact the quality of living of its citizens?* Since we are using HDI as a measure of quality of life, and this chart shows that there isn't really a correlation between the amount of energy being produced, we can conclude that a developed energy grid doesn't really impact the quality of life for citizens.
 
 [**Chart 2: Energy Sources and their Efficiency**]{.underline}
 
@@ -144,12 +124,32 @@ This graph shows the correlation between how much electricity is being produced 
 chart2
 ```
 
-This chart tells us what form of energy generation yields the most energy output from the least waste energy. From this graph we can see hydro power delivers the best results with 90% output.
+This chart tells us what form of energy generation yields the most energy output from the least waste energy. From this graph we can see hydro power delivers the best results with 90% output. This graph addresses our second research question of: *Which form of energy promises the most grid efficiency?* This graph shows us that hydro power promises the most grid efficiency. This conclusion also has real world implications, as knowledge that hydro power is the most efficient can help countries in developing their energy grid, as energy efficiency is a huge global concern. It also answers the question of which energy source countries should implement for maximum energy efficiency.
 
 [**Chart 3: Largest Share vs. HDI 2021**]{.underline}
 
-```{r echo=FALSE}
+```{r echo = FALSE, plotly = TRUE}
 chart3
 ```
 
-This graph highlights countries on a scale of their HDI and what source of energy holds the largest share in their country. Each dot on the chart represents a country and the higher the HDI on the graph, the better a country is doing both socially and economically. The importance of this graph is to highlight the trend of which sources of energy provide the best HDI. Energy is vital in a country's development and through analyzing its source, one can make conclusions on the impact the source has on a country's development.
+This graph highlights countries on a scale of their HDI and what source of energy holds the largest share in their country. Each dot on the chart represents a country and the higher the HDI on the graph, the better a country is doing both socially and economically. By hovering the cursor over each dot, one can see the country name as well as GDP and largest share of energy used. You can also isolate a country's data by double clicking the country from the legend. The importance of this graph is to highlight the trend of which sources of energy provide the best HDI. Energy is vital in a country's development and through analyzing its source, one can make conclusions on the impact the source has on a country's development. Essentially, this graph answers our third central question of: *Which form of energy consistently delivers improvements in HDI? And what can nations learn from our findings?* From this chart, we can conclude that countries with higher HDI have the largest share of coal and carbon as their sources of energy.
+
+### References:
+
+-   <https://www.belfercenter.org/project/geopolitics-energy-project>
+
+-   <https://www.foreignaffairs.com/articles/world/2021-11-30/geopolitics-energy-green-upheaval?check_logged_in=1&utm_medium=promo_email&utm_source=lo_flows&utm_campaign=registered_user_welcome&utm_term=email_1&utm_content=20221024>
+
+-   <https://energycapitalpower.com/geopolitics-of-energy-in-africa/>
+
+-   <https://hdr.undp.org/sites/default/files/2021-22_HDR/HDR21-22_Statistical_Annex_HDI_Table.xlsx>
+
+-   <https://ourworldindata.org/grapher/electricity-prod-source-stacked>
+
+-   <https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.KD.ZG?downloadformat=csv>
+
+-   <https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=csv>
+
+-   <https://ourworldindata.org/explorers/energy?tab=table&facet=none&country=USA~GBR~CHN~OWID_WRL~IND~BRA~ZAF&hideControls=false&Total+or+Breakdown=Total&Energy+or+Electricity=Primary+energy&Metric=Per+capita+consumption>
+
+# 
