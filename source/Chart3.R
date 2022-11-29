@@ -3,6 +3,7 @@
 library('tidyverse')
 library('dplyr')
 library('ggplot2')
+library('plotly')
 
 #Recieving Data
 hdi <- read.csv("https://hdr.undp.org/sites/default/files/2021-22_HDR/HDR21-22_Composite_indices_complete_time_series.csv")
@@ -35,6 +36,11 @@ energyByhdi <- merge(energyGrid, hdi2021, by="country")
 
 #Plotting graph
 chart3 <- ggplot(energyByhdi) +
-  geom_point(mapping = aes(x = Largest_Share, y = hdi_2021))
+  geom_point(mapping = aes(x = Largest_Share, y = hdi_2021, color = country)) 
+
+chart3 <- ggplotly(chart3)
+
+
+  
   
 
