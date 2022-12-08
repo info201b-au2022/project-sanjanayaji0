@@ -51,13 +51,6 @@ chart3 <- ggplot(energyByhdi) +
 
 chart3 <- ggplotly(chart3)
 
-<<<<<<< HEAD
 chart3
-=======
 
-
-
-  
-  
->>>>>>> 8d8dafaed6939996c3c7bc0f06055615c4347a5d
 
