@@ -39,9 +39,6 @@ energyGrid <- energyGrid %>% select(-c(biofuel, coal, gas, hydro,
                                        carbon, oil, nuclear, other))
 
 
-View(energyGrid)
-View(hdi2021)
-
 energyByhdi <- merge(energyGrid, hdi2021, by="country")
 
 #Plotting graph
@@ -51,6 +48,9 @@ chart3 <- ggplot(energyByhdi) +
 
 chart3 <- ggplotly(chart3)
 
-chart3
 
+
+
+  
+  
 
