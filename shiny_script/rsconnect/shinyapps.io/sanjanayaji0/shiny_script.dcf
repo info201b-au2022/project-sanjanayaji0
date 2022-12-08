@@ -1,0 +1,14 @@
+name: shiny_script
+title: shiny_script
+username:
+account: sanjanayaji0
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7846859
+bundleId: 6610247
+url: https://sanjanayaji0.shinyapps.io/shiny_script/
+when: 1670501435.14887
+lastSyncTime: 1670501435.14888
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData
