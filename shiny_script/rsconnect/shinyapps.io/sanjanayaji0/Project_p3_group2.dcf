@@ -5,10 +5,10 @@ account: sanjanayaji0
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7846892
-bundleId: 6610275
+bundleId: 6610309
 url: https://sanjanayaji0.shinyapps.io/Project_p3_group2/
-when: 1670501946.81708
-lastSyncTime: 1670501946.81709
+when: 1670502909.13448
+lastSyncTime: 1670502909.1345
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: .RData
