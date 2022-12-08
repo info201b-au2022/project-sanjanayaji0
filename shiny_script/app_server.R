@@ -1,12 +1,84 @@
-source("source/Chart3.R")
-source("source/Chart2.R")
-source("source/Chart1.R")
+## loading all libraries
 library('tidyverse')
 library('dplyr')
 library('ggplot2')
 library('plotly')
 library(stringr)
 library(maps)
+#chart1 data loading 
+hdi_by_year <- read.csv("https://hdr.undp.org/sites/default/files/2021-22_HDR/HDR21-22_Composite_indices_complete_time_series.csv") %>%
+  mutate(country = recode(str_trim(country), "Russian Federation" = "Russia", 
+                          "Bolivia (Plurinational State of)" = "Bolivia", 
+                          "Tanzania (United Republic of)" = "Tanzania", 
+                          "Venezuela (Bolivarian Republic of)" = "Venezuela"))
+
+country_energy <- read.csv("https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.csv") 
+
+# Cleaning them up for the chart #
+
+country_energy_20_years <- country_energy %>% 
+  select(country, year, electricity_generation) %>% 
+  group_by(country) %>%
+  filter(year == 2018)
+
+hdi_by_year <- hdi_by_year %>% 
+  select(country, hdi_2021)
+
+thing <- merge(hdi_by_year, country_energy_20_years, by="country")
+
+# Making the chart 
+world <- map_data("world")
+head(world)
+
+thing <- thing %>%
+  rename(region = country) %>%
+  mutate(region = recode(str_trim(region), "United States" = "USA",
+                         "United Kingdom" = "UK",
+                         "Korea (Rep.)" = "South Korea",
+                         "Congo" = "Democratic Republic of the Congo"))
+total_data <- inner_join(thing, world)
+
+
+# chart 2 data loading 
+energy_type <- c('Coal', 'Wind', 'Solar', 'Nuclear', 'Hydro')
+energy_efficiency <-c('33', '30', '20', '35', '90')
+data <- data.frame(energy_type, energy_efficiency)
+
+# chart 3 data loading 
+hdi <- read.csv("https://hdr.undp.org/sites/default/files/2021-22_HDR/HDR21-22_Composite_indices_complete_time_series.csv")
+
+energyGridComp <- read.csv("https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.csv")
+
+energyGridComp <- energyGridComp %>%
+  rename(biofuel = biofuel_share_elec, 
+         coal = coal_share_elec, 
+         gas = gas_share_elec, 
+         hydro = hydro_share_elec,
+         carbon = low_carbon_share_elec, 
+         oil = oil_share_elec,
+         nuclear = nuclear_share_elec, 
+         other = other_renewables_share_elec)
+
+# Cleaning up data
+energyGrid <- energyGridComp %>%
+  select(country, year, biofuel, coal, gas, hydro, carbon, oil, nuclear, other) %>% 
+  group_by(country) %>%
+  filter(year == "2021") %>%
+  drop_na() %>%
+  select(-c(year))
+
+#finding largest share of energy for each country
+energyGrid$Largest_Share<-colnames(energyGrid)[apply(energyGrid,1,which.max)]
+
+#Cleaning up data
+hdi2021 <- hdi %>%
+  select(country, hdi_2021)
+
+energyGrid <- energyGrid %>% select(-c(biofuel, coal, gas, hydro, 
+                                       carbon, oil, nuclear, other))
+
+
+energyByhdi <- merge(energyGrid, hdi2021, by="country")
 
 # Make introductory page with text: 
 introduction <- "Our main question is: How can a developed national energy grid impact the quality of living of 
